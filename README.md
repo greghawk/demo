@@ -1,16 +1,11 @@
-# Demo Application to show proficient abilities in several technologies and concepts
+# NodeJs backend application to show proficient abilities in several technologies and concepts
 
-The frontend react application is hosted in a docker container under elastic beanstalk on AWS.  It is scalable and fault tolerant running on linux with cloud watch enabled on EC2.  The use case is a simple one that allows a user to enter new items to a tree that contains random positive numbers between two bounds set by the user.  The data is system stateful meaning that if you refresh or go to any other browser the data is kept in synch using websockets and the backend listed as demo in my repositories.  More about that sample in it's readme.
+This backend nodejs application is hosted in elastic beanstalk on AWS.  It is scalable and fault tolerant running on linux with cloud watch enabled on EC2.  The use case is a simple one that allows the frontend application (wwwdemo in my repositories) to enter new items to a tree that contains random positive numbers between two bounds set by the frontend user.  The data is system stateful meaning that the data from client frontend is sent to mongodb and concurrently a custom memcache. That data is synchronized (broadcasted) via websockets to all connected clients.
 
 * Technologies and Concepts:
-  * React
-  * Redux
-  * Jest
+  * NodeJS
   * Socket io (Web Sockets)
-  * css, css3
-  * UI/UX
-  * Unit Testing
   * AWS Beanstalk, EC2, S3
-  * Docker
-  * ES6
-  * Webpack 4
+  * memory caching
+  * mongoDB
+  * data layer structure
